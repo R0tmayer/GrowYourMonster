@@ -9,12 +9,13 @@ namespace Core.Input
         [SerializeField] [Required] private RectTransform _joystick;
         [SerializeField] [Required] private RectTransform _knob;
         private int? _currentFinger;
-        private float _distanceRation;
+        public float DistanceRation { get; private set; }
         private Vector2 _initPos;
 
         private float _maxDistance;
 
         public Vector2 Direction { get; private set; }
+        public bool DirectionIsZero => Direction == Vector2.zero;
 
         private void Awake()
         {
@@ -25,7 +26,7 @@ namespace Core.Input
         {
             if (eventData.pointerId != _currentFinger) return;
             Vector2 direction = eventData.position - _initPos;
-            _distanceRation = Mathf.Clamp01(direction.magnitude / _maxDistance);
+            DistanceRation = Mathf.Clamp01(direction.magnitude / _maxDistance);
             Direction = direction.normalized;
             SetJoystickPosition();
         }
@@ -33,6 +34,7 @@ namespace Core.Input
         public void OnPointerDown(PointerEventData eventData)
         {
             if (_currentFinger != null) return;
+            
             ResetJoystickPosition();
             _joystick.position = eventData.position;
             _currentFinger = eventData.pointerId;
@@ -50,13 +52,13 @@ namespace Core.Input
 
         private void SetJoystickPosition()
         {
-            _knob.anchoredPosition = Direction * _distanceRation * _maxDistance;
+            _knob.anchoredPosition = Direction * DistanceRation * _maxDistance;
         }
 
         private void ResetJoystickPosition()
         {
             Direction = Vector2.zero;
-            _distanceRation = 0f;
+            DistanceRation = 0f;
             SetJoystickPosition();
         }
     }

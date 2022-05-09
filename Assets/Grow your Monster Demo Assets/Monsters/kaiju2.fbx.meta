@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 2c116e95ec870ad489ffb186316d8949
 ModelImporter:
-  serializedVersion: 19301
+  serializedVersion: 20200
   internalIDToNameTable:
   - first:
       74: 4105272284951505042
@@ -32,47 +32,47 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.001
-    second: {fileID: 2100000, guid: 183f749956c91a843a7cf9699e5327d6, type: 2}
+    second: {fileID: 2100000, guid: ddbfaceae98d2284b92e65dd53a0079e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.002
-    second: {fileID: 2100000, guid: 487cb653729ee724abc466097f19a236, type: 2}
+    second: {fileID: 2100000, guid: 81de87984e89d8042aceae409d2cc19b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.004
-    second: {fileID: 2100000, guid: 2eebb72692c58f642b8bdf690a6d12d0, type: 2}
+    second: {fileID: 2100000, guid: 5322fcd4d4b314a4c8fc078b36932c8d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.005
-    second: {fileID: 2100000, guid: 89f6b3f75166d564097ff10680271aae, type: 2}
+    second: {fileID: 2100000, guid: 9668fe2dd348f5141a4062fac9a51976, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.006
-    second: {fileID: 2100000, guid: d463469904b207c409cc894bc558b36e, type: 2}
+    second: {fileID: 2100000, guid: 479f2284586b9f04dae3a3d1dca042a5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.008
-    second: {fileID: 2100000, guid: 8dadfc6140477fe47a7cf7595a2579c5, type: 2}
+    second: {fileID: 2100000, guid: 92e35f62061f7984aa149d6e992e38cb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.009
-    second: {fileID: 2100000, guid: 6c67f4586700b4b469be8dcb89b76884, type: 2}
+    second: {fileID: 2100000, guid: ce9bf9ff33c38c74d8b4418eaab8f0f4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.010
-    second: {fileID: 2100000, guid: 44ea4dc7cb67f2f4482fd7f10949c1de, type: 2}
+    second: {fileID: 2100000, guid: 527e99b0f0d70034996bf22bfb8a569b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.011
-    second: {fileID: 2100000, guid: afde8fe1fa934be49a2d82c96d6833db, type: 2}
+    second: {fileID: 2100000, guid: e52450ca05790b947856c665332679ac, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -118,6 +118,7 @@ ModelImporter:
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
@@ -127,6 +128,9 @@ ModelImporter:
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -160,6 +164,7 @@ ModelImporter:
   animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

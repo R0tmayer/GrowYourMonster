@@ -1,4 +1,4 @@
-# Template for hyper-casual games
+# Grow Your Monster clone
 ## Unity Engine 2020.3.20f1
 
 ## Plugins and Packages

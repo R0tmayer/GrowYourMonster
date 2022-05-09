@@ -8,13 +8,6 @@
 - UI Scaling Toolkit
 - DI Framework
 
-## Ready-to-use features:
-- Input Swipe Receiver
-- Input Joystick Receiver
-- Hierarchy Highlighter
-- Upgrades system
-- Vibrations system
-
 ## Assets:
 - ODIN Inspector
 - DOTween

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Core.Hero

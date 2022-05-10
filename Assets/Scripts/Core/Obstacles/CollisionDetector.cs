@@ -8,6 +8,7 @@ namespace Core.Obstacles
     {
         [SerializeField] [Required] private ObstacleShaker _shaker;
         public BlendShape CurrentBlendShape { get; private set; }
+        public AnimatorController CurrentAnimator { get; private set; }
         public Attack CurrentAttacker { get; private set; }
         public HeroScaler HeroScaler { get; private set; }
 
@@ -18,6 +19,8 @@ namespace Core.Obstacles
                 CurrentBlendShape = blendShape;
                 CurrentAttacker = blendShape.GetComponent<Attack>();
                 HeroScaler = blendShape.GetComponent<HeroScaler>();
+                CurrentAnimator = blendShape.GetComponent<AnimatorController>();
+                CurrentAnimator.SetAttackState();
                 _shaker.StartShaking();
             }
         }
@@ -26,6 +29,7 @@ namespace Core.Obstacles
         {
             if (other.gameObject.TryGetComponent(out BlendShape _))
             {
+                CurrentAnimator.ResetAttackState();
                 CurrentBlendShape = null;
                 CurrentAttacker = null;
                 HeroScaler = null;

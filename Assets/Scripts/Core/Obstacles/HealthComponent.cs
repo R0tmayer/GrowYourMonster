@@ -49,20 +49,33 @@ namespace Core.Obstacles
 
         private IEnumerator HealthCoroutine()
         {
+            if (StartValue == 1)
+            {
+                DestroyObstacle();
+                _detector.CurrentAttacker.IncreaseRate(1);
+                yield break;
+            }
+            
             while (_health > 0)
             {
                 _health -= _detector.CurrentAttacker.Rate * Time.deltaTime;
 
                 if (_health <= 0)
                 {
+                    DestroyObstacle();
                     _detector.CurrentAttacker.IncreaseRate(StartValue * _gameParameters.HeroAttackModificator);
-                    _detector.HeroScaler.IncreaseScale(StartValue);
-                    _switcherToDivided.Switch();
                     yield break;
                 }
                 
                 yield return null;
             }
+        }
+
+        private void DestroyObstacle()
+        {
+            _switcherToDivided.Switch();
+            _detector.HeroScaler.IncreaseScale(StartValue);
+            _detector.CurrentAnimator.ResetAttackState();
         }
     }
 }

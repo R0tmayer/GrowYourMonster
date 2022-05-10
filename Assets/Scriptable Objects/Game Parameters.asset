@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Game Parameters
   m_EditorClassIdentifier: 
   _shakeEase: 1
-  _shakeDuration: 0.2
-  _shakeStrength: 0.326
-  _scaleDuration: 1
-  _scaleDelay: 1.24
-  _heroScaleRate: 0.001
-  _heroAttackModificator: 0.2
+  _shakeDuration: 0.1146
+  _shakeStrength: 0.464
+  _obstacleScaleDuration: 1
+  _obstacleScaleDelay: 2
+  _obstacleForce: 10
+  _heroScaleRate: 0.0147
+  _heroAttackModificator: 0.5
   _maxSingleScale: 0.1
   _blendShapeRate: 0.2

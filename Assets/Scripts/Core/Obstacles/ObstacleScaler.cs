@@ -13,7 +13,6 @@ namespace Core.Obstacles
             _gameParameters = gameParameters;
         }
 
-        [Button]
         public void ScaleToZeroAfterDelay()
         {
             var children = GetComponentsInChildren<Transform>();

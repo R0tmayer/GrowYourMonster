@@ -32,11 +32,7 @@ namespace Core.Hero
                 additiveScale = _maxScale;
             }
             
-            var newScale = transform.localScale + additiveScale;
-
-            print(additiveScale);
-            
-            transform.DOScale(newScale, _gameParameters.ObstacleScaleDuration);
+            transform.localScale += additiveScale;
         }
     }
 }

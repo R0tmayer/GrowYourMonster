@@ -25,5 +25,8 @@ namespace Core.Hero
         {
             _animator.SetFloat(blend, _input.DistanceRation);
         }
+
+        public void SetAttackState() => _animator.SetLayerWeight(1, 1);
+        public void ResetAttackState() => _animator.SetLayerWeight(1, 0);
     }
 }

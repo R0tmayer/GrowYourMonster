@@ -11,7 +11,8 @@ namespace Core
         [SerializeField] [Range(0.2f, 0.5f)] private float _shakeStrength;
         [SerializeField] [Range(1, 2)] private float _obstacleScaleDuration;
         [SerializeField] [Range(1, 2)] private float _obstacleScaleDelay;
-        [SerializeField] [Range(0.001f, 0.01f)] private float _heroScaleRate;
+        [SerializeField] [Range(5, 10)] private float _obstacleForce;
+        [SerializeField] [Range(0.01f, 0.05f)] private float _heroScaleRate;
         [SerializeField] [Range(0.1f, 1f)] private float _heroAttackModificator;
         [SerializeField] [Range(0.1f, 0.2f)] private float _maxSingleScale;
         [SerializeField] [Range(0.1f, 0.2f)] private float _blendShapeRate;
@@ -20,11 +21,11 @@ namespace Core
         public float ShakeDuration => _shakeDuration;
         public float ShakeStrength => _shakeStrength;
         public float ObstacleScaleDelay => _obstacleScaleDelay;
+        public float ObstacleForce => _obstacleForce;
         public float ObstacleScaleDuration => _obstacleScaleDuration;
         public float HeroScaleRate => _heroScaleRate;
         public float MaxSingleScale => _maxSingleScale;
         public float HeroAttackModificator => _heroAttackModificator;
         public float BlendShapeRate => _blendShapeRate;
-
     }
 }

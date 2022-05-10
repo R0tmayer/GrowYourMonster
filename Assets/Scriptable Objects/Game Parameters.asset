@@ -20,5 +20,5 @@ MonoBehaviour:
   _obstacleForce: 10
   _heroScaleRate: 0.0147
   _heroAttackModificator: 0.5
-  _maxSingleScale: 0.1
+  _maxSingleScale: 0.2
   _blendShapeRate: 0.2

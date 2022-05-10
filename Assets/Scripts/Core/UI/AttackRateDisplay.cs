@@ -8,12 +8,11 @@ namespace Core.UI
 {
     public class AttackRateDisplay : MonoBehaviour
     {
-        [SerializeField] [Required] private Attack _attacker;
         [SerializeField] [Required] private TMP_Text _text;
 
-        private void Update()
+        public void UpdateValue(int value)
         {
-            _text.SetText("{0:0}", _attacker.Rate);
+            _text.SetText("{0:0}", value);
         }
     }
 }

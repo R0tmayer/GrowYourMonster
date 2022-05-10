@@ -21,18 +21,18 @@ namespace Core.Hero
             _transposer = _virtualCamera.GetCinemachineComponent<CinemachineTransposer>();
             _startOffset = _transposer.m_FollowOffset;
             
-            var newOffset = _startOffset + Vector3.one * _target.localScale.x * A;
+            var newOffset = _startOffset + Vector3.one * _target.localScale.x * A / 100f;
             newOffset.x = 0;
-            newOffset.z = _startOffset.z - _target.localScale.x * B;
+            newOffset.z = _startOffset.z - _target.localScale.x * B / 100f;
 
             _transposer.m_FollowOffset = newOffset;
         }
 
         private void Update()
         {
-            var newOffset = _startOffset + Vector3.one * _target.localScale.x * A;
+            var newOffset = _startOffset + Vector3.one * _target.localScale.x * A / 100f;
             newOffset.x = 0;
-            newOffset.z = _startOffset.z - _target.localScale.x * B;
+            newOffset.z = _startOffset.z - _target.localScale.x * B / 100f;
             
             _transposer.m_FollowOffset =
                 Vector3.Lerp(_transposer.m_FollowOffset, newOffset,

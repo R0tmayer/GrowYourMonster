@@ -9,10 +9,17 @@ namespace Core.UI
     public class AttackRateDisplay : MonoBehaviour
     {
         [SerializeField] [Required] private TMP_Text _text;
+        [SerializeField] [Required] private Transform _model;
 
         public void UpdateValue(int value)
         {
             _text.SetText("{0:0}", value);
+
+            var offset = _model.localScale.y / 50f;
+
+
+            transform.localPosition = new Vector3(transform.localPosition.x, _model.localScale.y / 10f - offset,
+                transform.localPosition.z);
         }
     }
 }

@@ -755,6 +755,12 @@ Transform:
   m_Father: {fileID: 517092840}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &445324700 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3976093549756780737, guid: e22fd03fea99a6a489597d2de6e96c67,
+    type: 3}
+  m_PrefabInstance: {fileID: 1830030206}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &517092839
 GameObject:
   m_ObjectHideFlags: 0
@@ -2563,7 +2569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _virtualCamera: {fileID: 1601240729}
-  _target: {fileID: 1830030212}
+  _target: {fileID: 445324700}
   _lerpRate: 5
   A: 10
   B: 5
@@ -3041,6 +3047,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 8865988180618320415, guid: e22fd03fea99a6a489597d2de6e96c67,
+        type: 3}
+      propertyPath: _model
+      value: 
+      objectReference: {fileID: 445324700}
     - target: {fileID: 9063217713995318060, guid: e22fd03fea99a6a489597d2de6e96c67,
         type: 3}
       propertyPath: m_Layer

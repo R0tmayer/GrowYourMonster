@@ -526,6 +526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186290be00fd4e1ea48030fe7929fc2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _model: {fileID: 3976093549756780737}
 --- !u!1 &4906077337911036726
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,6 +1012,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AttackRateDisplay
       objectReference: {fileID: 0}
+    - target: {fileID: 7920938389051611152, guid: ed9552861cec89e46945cbba9490b2ed,
+        type: 3}
+      propertyPath: _model
+      value: 
+      objectReference: {fileID: 3976093549756780737}
     - target: {fileID: 7920938389051611152, guid: ed9552861cec89e46945cbba9490b2ed,
         type: 3}
       propertyPath: _attacker

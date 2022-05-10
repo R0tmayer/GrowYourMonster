@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Core.Vibrations
 {
-    [CreateAssetMenu(fileName = "Vibrations UpgradesConfig", menuName = "Configs/Vibrations", order = 1)]
+    [CreateAssetMenu(fileName = "Vibrations UpgradesConfig", menuName = "ScriptableObjects/Vibrations", order = 1)]
     public class VibrationsConfig : ScriptableObject
     {
         [SerializeField] private HapticTypes _upgradeVibration;

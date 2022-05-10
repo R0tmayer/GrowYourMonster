@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Core.Upgrades
 {
-    [CreateAssetMenu(fileName = "Upgrades Config", menuName = "Configs/Upgrades", order = 1)]
+    [CreateAssetMenu(fileName = "Upgrades Config", menuName = "ScriptableObjects/Upgrades", order = 1)]
 
     public class UpgradesConfig : ScriptableObject
     {

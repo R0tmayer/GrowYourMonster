@@ -73,6 +73,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _duration: 0.21
   _shakeStrength: 0.32
+--- !u!114 &7213709717631518147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6473070911358976240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596154ae2f344d76ac02b30e82d81226, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _overrideDependencySource: 0
+  _dependencySource: 30
+  _destroyWhenFinished: 1
 --- !u!1001 &4589190322156551774
 PrefabInstance:
   m_ObjectHideFlags: 0

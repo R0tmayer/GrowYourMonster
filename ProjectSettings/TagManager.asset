@@ -11,11 +11,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - TopPiece
+  - BottomPiece
+  - Monster
+  - IgnoreMonster
+  - Ground
   - 
   - 
   - 

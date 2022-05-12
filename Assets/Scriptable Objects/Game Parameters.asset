@@ -16,9 +16,7 @@ MonoBehaviour:
   _shakeDuration: 0.1146
   _shakeStrength: 0.464
   _obstacleScaleDuration: 1
-  _obstacleScaleDelay: 2
+  _obstacleScaleDelay: 1
   _obstacleForce: 10
-  _heroScaleRate: 0.0147
   _heroAttackModificator: 0.5
-  _maxSingleScale: 0.2
   _blendShapeRate: 0.2

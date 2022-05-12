@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace Core.Obstacles
 {
-    public class HealthComponent : MonoBehaviour
+    public class ObstacleHealth : MonoBehaviour
     {
         [SerializeField] private float _health;
         [SerializeField] [Required] private SwitcherToDividedPieces _switcherToDivided;
@@ -17,16 +17,15 @@ namespace Core.Obstacles
 
         private GameParameters _gameParameters;
         private IEnumerator _healthCoroutine;
+        private AttackTextPool _attackTextPool;
 
         public int StartValue { get; private set; }
 
-        private void Start()
-        {
-            StartValue = (int) _health;
-        }
+        private void Start() => StartValue = (int)_health;
 
-        public void Construct(GameParameters gameParameters)
+        public void Construct(GameParameters gameParameters, AttackTextPool attackTextPool)
         {
+            _attackTextPool = attackTextPool;
             _gameParameters = gameParameters;
         }
 
@@ -54,8 +53,9 @@ namespace Core.Obstacles
         {
             if (StartValue == 1)
             {
-                DestroyObstacle();
+                _attackTextPool.Animate(1);
                 _detector.CurrentAttacker.IncreaseRate(1);
+                DestroyObstacle();
                 yield break;
             }
 
@@ -69,8 +69,9 @@ namespace Core.Obstacles
 
                 if (_health <= 0)
                 {
-                    DestroyObstacle();
+                    _attackTextPool.Animate(StartValue * _gameParameters.HeroAttackModificator);
                     _detector.CurrentAttacker.IncreaseRate(StartValue * _gameParameters.HeroAttackModificator);
+                    DestroyObstacle();
                     _fillBar.gameObject.SetActive(false);
                     yield break;
                 }
@@ -82,7 +83,7 @@ namespace Core.Obstacles
         private void DestroyObstacle()
         {
             _switcherToDivided.Switch();
-            _detector.HeroScaler.IncreaseScale(StartValue);
+            _detector.HeroScaler.IncreaseScale();
             _detector.CurrentAnimator.ResetAttackState();
         }
     }

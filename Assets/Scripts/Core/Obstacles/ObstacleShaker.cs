@@ -7,15 +7,12 @@ namespace Core.Obstacles
 {
     public class ObstacleShaker : MonoBehaviour
     {
-        [SerializeField] [Required] private HealthComponent _health;
+        [SerializeField] [Required] private ObstacleHealth _health;
         
         private bool _collided;
         private GameParameters _gameParameters;
 
-        public void Construct(GameParameters gameParameters)
-        {
-            _gameParameters = gameParameters;
-        }
+        public void Construct(GameParameters gameParameters) => _gameParameters = gameParameters;
 
         public void StartShaking()
         {

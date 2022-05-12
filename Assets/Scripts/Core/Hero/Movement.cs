@@ -11,15 +11,9 @@ namespace Core.Hero
         private InputJoystickReceiver _input;
         private Rigidbody _rigidbody;
 
-        public void Construct(InputJoystickReceiver input)
-        {
-            _input = input;
-        }
+        public void Construct(InputJoystickReceiver input) => _input = input;
 
-        private void Awake()
-        {
-            _rigidbody = GetComponent<Rigidbody>();
-        }
+        private void Awake() => _rigidbody = GetComponent<Rigidbody>();
 
         private void Update()
         {
@@ -30,7 +24,6 @@ namespace Core.Hero
                 return;
 
             LookAt(direction);
-            
         }
 
         private void LookAt(Vector3 direction)

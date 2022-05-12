@@ -1,6 +1,7 @@
 using Core;
 using Core.Input;
 using Core.Obstacles;
+using Core.UI;
 using Core.Upgrades;
 using Core.Vibrations;
 using DELTation.DIFramework;
@@ -12,9 +13,11 @@ namespace DI
 {
     public sealed class GameCompositionRoot : DependencyContainerBase
     {
-        [SerializeField] [Required] private VibrationsConfig _vibrationsVibrationsConfig;
-        [SerializeField] [Required] private UpgradesConfig _upgradesUpgradesConfig;
-        [SerializeField] [Required] private GameParameters _gameParameters;
+        [SerializeField] [AssetSelector] private VibrationsConfig _vibrationsVibrationsConfig;
+        [SerializeField] [AssetSelector] private UpgradesConfig _upgradesUpgradesConfig;
+        [SerializeField] [AssetSelector] private GameParameters _gameParameters;
+        [SerializeField] [AssetSelector] private HeroScaleConfig _heroScaleConfig;
+        [SerializeField] [Required] private AttackTextPool _attackTextPool;
         [SerializeField] [Required] private InputJoystickReceiver _inputJoystickReceiver;
 
         protected override void ComposeDependencies(ICanRegisterContainerBuilder builder)
@@ -24,6 +27,8 @@ namespace DI
                 .RegisterIfNotNull(_vibrationsVibrationsConfig)
                 .RegisterIfNotNull(_inputJoystickReceiver)
                 .RegisterIfNotNull(_gameParameters)
+                .RegisterIfNotNull(_heroScaleConfig)
+                .RegisterIfNotNull(_attackTextPool)
                 .RegisterIfNotNull(_upgradesUpgradesConfig);
         }
     }

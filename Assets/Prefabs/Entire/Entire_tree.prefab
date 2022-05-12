@@ -39,8 +39,8 @@ GameObject:
   - component: {fileID: 9043926151371256425}
   - component: {fileID: 9067304838040131752}
   - component: {fileID: 992760775279362154}
-  - component: {fileID: 2035187573626662439}
   - component: {fileID: 4644755227213998604}
+  - component: {fileID: 8510008495412416428}
   m_Layer: 0
   m_Name: Entire_tree
   m_TagString: Untagged
@@ -57,7 +57,7 @@ Transform:
   m_GameObject: {fileID: 5411498326813806524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 5953520243011164746}
   - {fileID: 6126557844121431621}
@@ -104,27 +104,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _detector: {fileID: 9067304838040131752}
-  _health: {fileID: 2035187573626662439}
+  _health: {fileID: 8510008495412416428}
   _shaker: {fileID: 4161802283288644792}
   _scaler: {fileID: 6678282164678634493}
   _collider: {fileID: 9043926151371256425}
   _dividedParent: {fileID: 7841505398605865109}
---- !u!114 &2035187573626662439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5411498326813806524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeb177ee43dc4741b65f566800d51ffd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _health: 1
-  _switcherToDivided: {fileID: 992760775279362154}
-  _detector: {fileID: 9067304838040131752}
-  _fillBar: {fileID: 234322322262682845}
 --- !u!114 &4644755227213998604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +124,22 @@ MonoBehaviour:
   _overrideDependencySource: 0
   _dependencySource: 30
   _destroyWhenFinished: 1
+--- !u!114 &8510008495412416428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5411498326813806524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 283ab62aa7a98f04d8941f957de49a0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 1
+  _switcherToDivided: {fileID: 992760775279362154}
+  _detector: {fileID: 9067304838040131752}
+  _fillBar: {fileID: 234322322262682845}
 --- !u!114 &4161802283288644792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e30123d117f434db86c3ee0754431ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: {fileID: 2035187573626662439}
+  _health: {fileID: 8510008495412416428}
 --- !u!114 &7213709717631518147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,6 +382,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9035381430197542779, guid: a653c18764fbfca4c8d728f0d05262bf,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d62c220024ba2ff4c8a839958c4c5324, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a653c18764fbfca4c8d728f0d05262bf, type: 3}
 --- !u!1 &6473070911358976240 stripped

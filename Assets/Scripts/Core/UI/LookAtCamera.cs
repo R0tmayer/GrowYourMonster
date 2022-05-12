@@ -7,14 +7,8 @@ namespace Core.UI
     {
         private Camera _camera;
 
-        private void Awake()
-        {
-            _camera = Camera.main;
-        }
+        private void Awake() => _camera = Camera.main;
 
-        private void LateUpdate()
-        {
-            transform.LookAt(transform.position + _camera.transform.forward);
-        }
+        private void LateUpdate() => transform.LookAt(transform.position + _camera.transform.forward);
     }
 }

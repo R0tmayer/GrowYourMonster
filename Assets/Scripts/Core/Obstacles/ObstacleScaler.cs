@@ -8,10 +8,7 @@ namespace Core.Obstacles
     {
         private GameParameters _gameParameters;
 
-        public void Construct(GameParameters gameParameters)
-        {
-            _gameParameters = gameParameters;
-        }
+        public void Construct(GameParameters gameParameters) => _gameParameters = gameParameters;
 
         public void ScaleToZeroAfterDelay()
         {

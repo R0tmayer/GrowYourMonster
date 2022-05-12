@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -12,24 +13,21 @@ namespace Core.Hero
 
         private GameParameters _gameParameters;
 
-        public void Construct(GameParameters gameParameters)
-        {
-            _gameParameters = gameParameters;
-        }
+        public void Construct(GameParameters gameParameters) => _gameParameters = gameParameters;
 
-        private void LateUpdate()
-        {
-            _skinnedMeshRenderer.SetBlendShapeWeight(0, _value);
-        }
+        private void LateUpdate() => _skinnedMeshRenderer.SetBlendShapeWeight(0, _value);
 
         public void Decrease(int value)
         {
-            _value -= value * _gameParameters.BlendShapeRate;
+            var newValue = _value - value * _gameParameters.BlendShapeRate;
             
-            if (_value < 0)
+            if (newValue < 0)
             {
-                _value = 0;
+                newValue = 0;
             }
+            
+            DOTween.To(() => _value, x => _value = x, newValue, 0.5f);
+            
         }
     } 
 }

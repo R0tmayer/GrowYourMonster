@@ -15,16 +15,23 @@ namespace Core.Input
         private float _maxDistance;
 
         public Vector2 Direction { get; private set; }
+        public bool Enabled { get; set; }
         public bool DirectionIsZero => Direction == Vector2.zero;
 
         private void Awake()
         {
+            _joystick.gameObject.SetActive(false);
             _maxDistance = _joystick.rect.width / 2f;
         }
 
         public void OnDrag(PointerEventData eventData)
         {
-            if (eventData.pointerId != _currentFinger) return;
+            if (Enabled == false)
+                return;
+            
+            if (eventData.pointerId != _currentFinger)
+                return;
+            
             Vector2 direction = eventData.position - _initPos;
             DistanceRation = Mathf.Clamp01(direction.magnitude / _maxDistance);
             Direction = direction.normalized;
@@ -33,8 +40,11 @@ namespace Core.Input
 
         public void OnPointerDown(PointerEventData eventData)
         {
-            if (_currentFinger != null) return;
+            if (Enabled == false)
+                return;
             
+            if (_currentFinger != null) return;
+
             ResetJoystickPosition();
             _joystick.position = eventData.position;
             _currentFinger = eventData.pointerId;

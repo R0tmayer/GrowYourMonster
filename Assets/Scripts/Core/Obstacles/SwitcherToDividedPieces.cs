@@ -10,7 +10,7 @@ namespace Core.Obstacles
     public class SwitcherToDividedPieces : MonoBehaviour
     {
         [SerializeField] [Required] private CollisionDetector _detector;
-        [SerializeField] [Required] private HealthComponent _health;
+        [SerializeField] [Required] private ObstacleHealth _health;
         [SerializeField] [Required] private ObstacleShaker _shaker;
         [SerializeField] [Required] private ObstacleScaler _scaler;
         [SerializeField] [Required] private Collider _collider;
@@ -20,15 +20,9 @@ namespace Core.Obstacles
 
         private GameParameters _gameParameters;
 
-        public void Construct(GameParameters gameParameters)
-        {
-            _gameParameters = gameParameters;
-        }
+        public void Construct(GameParameters gameParameters) => _gameParameters = gameParameters;
 
-        private void Awake()
-        {
-            _childrenRigidbodies = _dividedParent.GetComponentsInChildren<Rigidbody>().ToList();
-        }
+        private void Awake() => _childrenRigidbodies = _dividedParent.GetComponentsInChildren<Rigidbody>().ToList();
 
         public void Switch()
         {
